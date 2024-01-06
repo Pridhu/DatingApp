@@ -53,7 +53,6 @@ export class MemberListComponent {
       this.memberService.setUserParams(this.userParams);
       return this.loadMembers();
     }
-
   }
 }
 
