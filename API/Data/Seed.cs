@@ -31,6 +31,7 @@ namespace API.Data
                 new AppRole{Name = "Moderator"},
             };
 
+
             foreach (var role in roles)
             {
                 await roleManager.CreateAsync(role);
