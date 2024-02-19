@@ -6,6 +6,7 @@ EXPOSE 8080
 COPY *.csproj ./
 RUN dotnet restore
 
+
 # copy everything else and build
 COPY .  ./
 RUN dotnet publish -c Release -o out
