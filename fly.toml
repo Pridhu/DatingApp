@@ -1,0 +1,28 @@
+# fly.toml app configuration file generated for happychat on 2024-02-20T17:25:27Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'happychat'
+primary_region = 'lhr'
+
+[build]
+  image = 'priya0493/datingapp:latest'
+
+[env]
+  ASPNETCORE_URLS="http://+:8080"
+  CloudinarySettings__CloudName="dmuyt5zi8"
+  CloudinarySettings__ApiKey="115326792956572"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
